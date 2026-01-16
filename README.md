@@ -1,0 +1,1 @@
+A robust Spring Boot 3 CRUD application designed for managing employee records efficiently. This project features a responsive user interface built with Thymeleaf and custom CSS, supporting full Create, Read, Update, and Delete operations.
