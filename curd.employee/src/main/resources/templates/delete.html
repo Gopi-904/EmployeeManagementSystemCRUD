@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Employee - EMS</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">EMS Portal</div>
+        <div class="nav-links">
+            <a th:href="@{/viewAll}">View All</a>
+            <a th:href="@{/createPage}">Add Employee</a>
+            <a th:href="@{/deletePage}" class="nav-delete">Delete</a>
+        </div>
+    </nav>
+
+    <div class="delete-container" style="text-align: center; margin-top: 50px;">
+        <h2>Delete Employee</h2>
+        <p class="delete-warning" style="color: red;">Warning: This action is permanent.</p>
+        
+        <form th:action="@{/deleteEmployee}" method="post">
+            <div style="margin-bottom: 15px;">
+                <label>Enter Employee ID to Remove:</label><br>
+                <input type="number" name="id" placeholder="e.g. 101" required>
+            </div>
+            <button type="submit" class="btn-delete-confirm" 
+                    style="background-color: red; color: white; padding: 10px 20px; border: none; cursor: pointer;">
+                CONFIRM DELETE
+            </button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee List - EMS</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-logo">EMS Portal</div>
+    <div class="nav-links">
+        <a th:href="@{/homepage}">Home</a> <a th:href="@{/viewAll}">View All</a>
+        <a th:href="@{/createPage}">Add Employee</a>
+        <a th:href="@{/searchPage}">Search</a>
+        <a th:href="@{/updatePage}">Update</a>
+        <a th:href="@{/deletePage}" class="nav-delete">Delete</a>
+    </div>
+</nav>
+
+    <div class="container">
+        <h2>Employee List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="emp : ${employees}">
+                    <td th:text="${emp.id}"></td>
+                    <td th:text="${emp.name}"></td>
+                    <td th:text="${emp.department}"></td>
+                    <td th:text="${emp.salary}"></td>
+                    <td>
+                        <a th:href="@{/updatePage(id=${emp.id})}">Edit</a> | 
+                        <a th:href="@{/deleteEmployee(id=${emp.id})}" 
+                           onclick="return confirm('Are you sure?')">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

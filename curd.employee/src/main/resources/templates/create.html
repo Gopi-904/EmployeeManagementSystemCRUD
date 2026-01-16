@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Employee Management System</title>
+<link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-logo">EMS Portal</div>
+    <div class="nav-links">
+        <a th:href="@{/viewAll}">View All</a>
+        <a th:href="@{/createPage}">Add Employee</a>
+        <a th:href="@{/searchPage}">Search</a>
+        <a th:href="@{/updatePage}">Update</a>
+        <a th:href="@{/deletePage}" class="nav-delete">Delete</a>
+        <a th:href="@{/about}" class="nav-about">About Us</a> </div>
+</nav>
+	<form action="create" method = "post">
+	<h3>Fill Employee Information:</h3>
+	<label>Employee Id:</label>
+	<input type = "text" name="id">
+	<br><br>
+	<label>Employee Name:</label>
+	<input type = "text" name="name">
+	<br><br>
+	<label>Employee Department:</label>
+	<input type = "text" name="department">
+	<br><br>
+	<label>Employee Salary:</label>
+	<input type = "text" name="salary">
+	<br><br>
+	<input type ="submit" value = "ADD EMPLOYEE">
+	</form>
+</body>
+</html>

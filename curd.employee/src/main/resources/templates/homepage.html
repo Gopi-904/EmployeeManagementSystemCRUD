@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>EMS Portal - Home</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">EMS Portal</div>
+        <div class="nav-links">
+            <a th:href="@{/homepage}">Home</a>
+            <a th:href="@{/viewAll}">View All</a>
+            <a th:href="@{/createPage}">Add Employee</a>
+            <a th:href="@{/searchPage}">Search</a>
+            <a th:href="@{/updatePage}">Update</a>
+            <a th:href="@{/deletePage}" class="nav-delete">Delete</a>
+        </div>
+    </nav>
+
+    <div class="main-header" style="margin-top: 50px; text-align: center;">
+        <h1>Employee CRUD Application</h1>
+        <p>Select an action below to manage your workforce.</p>
+    </div>
+
+    <div class="dashboard-container">
+        <a th:href="@{/createPage}" class="nav-card"><span>➕ Create New Employee</span></a>
+        <a th:href="@{/updatePage}" class="nav-card"><span>📝 Update Employee</span></a>
+        <a th:href="@{/deletePage}" class="nav-card"><span>🗑️ Delete Employee</span></a>
+        <a th:href="@{/searchPage}" class="nav-card"><span>🔍 Search Employee</span></a>
+        <a th:href="@{/viewAll}" class="nav-card" style="grid-column: 1/-1;"><span>📊 View All Employee Data</span></a>
+    </div>
+
+    <footer class="declaration-footer">
+        <div class="footer-content">
+            <h3>System Declaration</h3>
+            <p>I hereby declare that this Employee Management System is a secure platform...</p>
+            <p class="copyright">&copy; 2026 EMS Portal | All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

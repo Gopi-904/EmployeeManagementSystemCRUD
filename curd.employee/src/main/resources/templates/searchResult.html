@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Search Result</title>
+<link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-logo">EMS Portal</div>
+    <div class="nav-links">
+        <a th:href="@{/viewAll}">View All</a>
+        <a th:href="@{/createPage}">Add Employee</a>
+        <a th:href="@{/searchPage}">Search</a>
+        <a th:href="@{/updatePage}">Update</a>
+        <a th:href="@{/deletePage}" class="nav-delete">Delete</a>
+        <a th:href="@{/about}" class="nav-about">About Us</a> </div>
+</nav>
+	<h3>Employee Information:</h3>
+	<h5 th:text = "${empObj.id}"></h5>
+	<h5 th:text = "${empObj.name}"></h5>
+	<h5 th:text = "${empObj.department}"></h5>
+	<h5 th:text = "${empObj.salary}"></h5>
+</body>
+</html>
